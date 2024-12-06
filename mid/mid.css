@@ -9,12 +9,7 @@
     padding: 10px;
     background-color: #fff;
     margin: 10px 0;
-   
 }
-.main-nav a{
-    color: red;
-}
-
 
 .featured-article.tech-article {
     border-left: 4px solid blue;
@@ -30,9 +25,8 @@ article p {
 }
 
 article > h2 {
-    color: navy;
+    color:navy;
     margin-bottom: 20px;
-    
 }
 
 h2 + .article-content {
@@ -57,25 +51,21 @@ th, td {
     text-align: left;
 }
 
-
 .nav-link + .nav-link {
     margin-left: 10px;
-    
 }
 
 .highlight {
-    background-color: #ffffd0;
+    background-color:palegoldenrod;
     padding: 10px;
 }
 
 th {
     background-color: #f5f5f5;
-    text-align: left;
 }
 
 tr:hover {
     background-color: #f9f9f9;
-    
 }
 
 body {
@@ -84,11 +74,4 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #fafafa;
-}
-.future-of-ai {
-
-    border-left: 5px solid blue;
-    padding: auto;
-    padding-left: 10px;
-    
 }
