@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculate</title>
+    <title>Document</title>
     <link rel="stylesheet" href="calcu2so.css">
-    <link rel="stylesheet" href="calcu2so.js">
 </head>
 <body>
-    <h1>calculate</h1>
-    <input type="number" id="num1" placeholder="enter number" required>
-    <input type="number" id="num2" placeholder="enter number" required>
-    
-    <div class="buttons">
-        <button onclick="calculate('add')">+</button>
-        <button onclick="calculate('subtract')">-</button>
-        <button onclick="calculate('multiply')">*</button>
-        <button onclick="calculate('divide')">/</button>
-    </div>
-    
-    <h2 id="result"></h2>
+    <h1>Tính Toán</h1>
+    <input type="number" id="num1" placeholder="Nhập số thứ nhất">
+    <input type="number" id="num2" placeholder="Nhập số thứ hai">
 
+    <select id="operation">
+        <option value="add">Cộng</option>
+        <option value="subtract">Trừ</option>
+        <option value="multiply">Nhân</option>
+        <option value="divide">Chia</option>
+    </select>
+
+    <button onclick="calculate()">Tính Toán</button>
+    <h2 id="result"></h2>
     <script>
-        function calculate(operation) {
+         function calculate() {
             const num1 = parseFloat(document.getElementById('num1').value);
             const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.getElementById('operation').value;
             let result;
 
             switch (operation) {
@@ -41,15 +41,18 @@
                     if (num2 !== 0) {
                         result = num1 / num2;
                     } else {
-                        result = 'Error : Cannot divided by 0.';
+                        result = 'Lỗi: Không thể chia cho 0.';
                     }
                     break;
                 default:
-                    result = 'Error';
+                    result = 'Lỗi: Lựa chọn không hợp lệ.';
                     break;
             }
-            document.getElementById('result').innerText = 'result: ' + result;
+
+            document.getElementById('result').innerText = 'Kết quả: ' + result;
         }
+         
+
     </script>
 </body>
 </html>
